@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<meta name="generator" content="Hugo 0.98.0" /><meta charset="UTF-8">
+	<meta name="generator" content="Hugo 0.99.0" /><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="icon" href=/images/brand.png type="image/gif">
@@ -1107,14 +1107,10 @@ Technology Risk
     </div>
 </div></footer>
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
+    if (document.body.className.includes("light")) {
         document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
+        localStorage.setItem("pref-theme", 'dark');
     }
-
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
